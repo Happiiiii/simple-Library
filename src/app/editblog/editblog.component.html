@@ -1,0 +1,56 @@
+
+<section class="py-5" id="bodySection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form [formGroup]="Details" (submit)="updateData()">
+          <div class="form-group">
+            <label for="exampleInputEmail1">BookName:</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="BookName"
+              id="examplename"
+              aria-describedby="emailHelp"
+              placeholder="Enter BookName"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">AuthorName:</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="AuthorName"
+              id="examplename"
+              placeholder="Enter AuthorName"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Edition:</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="Edition"
+              id="examplename"
+              placeholder="Enter Edition"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Description:</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="Description"
+              id="examplename"
+              placeholder="Enter Description"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-success">Add-User</button>
+          &nbsp;
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

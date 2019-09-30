@@ -1,0 +1,48 @@
+<section class="" id="bodySection">
+  <div class="container">
+    <div class="home py-5">
+      <button class="btn btn-success" style="position: fixed;" routerLink="">Create-Book</button>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">BookName</th>
+              <th scope="col">AuthorName</th>
+              <th scope="col">Edition</th>
+              <th scope="col">Description</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let data of Details; let ind = index">
+              <th scope="row">{{ ind + 1 }}</th>
+              <td scope="col">{{ data.BookName }}</td>
+              <td scope="col">{{ data.AuthorName }}</td>
+              <td scope="col">{{ data.Edition }}</td>
+              <td scope="col">{{ data.Description }}</td>
+              <td>
+                <button
+                  routerLink="../editblog/{{ data.id }}"
+                  class="btn btn-primary "
+                  style="margin-left: 10px;"
+                >
+                  Edit
+                </button>
+              </td>
+              <td>
+                <button (click)="deleteData(data.id)" class="btn btn-danger ">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
